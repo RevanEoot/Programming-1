@@ -1,0 +1,40 @@
+"""
+Evan Root
+10/3/2018
+Pizza Practice program
+Calculates the customer's bill depending on what they order
+"""
+print("Hello, welcome to the pizza program!")
+#inputs
+pizza = int(input("How many inches of pizza of pizza do you want?\nWe have 6,10,14, and 16 inch pizzas. Insert number of inches: "))
+if pizza == 6:
+    cost = 4
+elif pizza == 10:
+    cost = 7.5
+elif pizza == 14:
+    cost = 12.9
+elif pizza == 16:
+    cost = 14.25
+else:
+    print("We don't have that size of pizza \n(make sure you don't put inches after the number")
+loop = "yes"
+while loop == "yes":
+    top = input("Do you want a topping? ").lower()
+    if top == "yes":
+        if pizza == 6:
+            cost += .5
+            loop = "no"
+        elif pizza == 10:
+            cost +=.6
+            loop = "no"
+        elif pizza == 14:
+            cost +=.75
+            loop = "no"
+        elif pizza == 16:
+            cost +=.9
+            loop = "no"
+    elif top == "no":
+       cost = cost
+       loop = "no"
+    else:
+        loop = input("you inputed something wrong. Would you like to try again? ").lower()
